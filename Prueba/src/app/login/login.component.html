@@ -1,18 +1,44 @@
-<div>
-  <h2>Iniciar sesión</h2>
-  <form>
-    <div>
-      <label for="usuario">Usuario:</label>
-      <input type="text" name="usuario" [(ngModel)]="username">
-    </div>
-    <div>
-      <label for="contrasena">Contraseña:</label>
-      <input type="password" name="contrasena" [(ngModel)]="password">
-    </div>
-    <div *ngIf="error" class="error">
-      Usuario o contraseña incorrectos.
-    </div>
-    <button type="button" (click)="login()">Iniciar sesión</button>
-  </form>
-</div>
 
+<body>
+    <div class="contenedor">
+        <div class="contenido">
+            <div class="contenido-info">
+                <div class="contenido-imagen">
+                    <img src="../../assets/img/Grupo 258.svg" class="imagen__sufi" alt="">
+                </div>
+    
+                <div class="contenido-titulo">
+                    <h1 class="contenido__titulo">Sufipay</h1>
+                </div>
+    
+                <div class="contenido-descripcion">
+                    <p class="contenido__descripcion">Administrador comercial</p>
+                </div>
+            </div>
+
+            <div class="contenido-entradas">
+                <div>
+                    <input type="text" name="usuario" [(ngModel)]="username" placeholder="Usuario">
+                </div>
+                <div>
+                    <input type="password" name="contrasena" [(ngModel)]="password" placeholder="Contraseña">
+                </div>
+                <div *ngIf="error" class="error">
+                    Usuario o contraseña incorrectos.
+                </div>
+                <button type="button" (click)="login()">Iniciar sesión</button>
+            </div>
+
+            <div class="contenido-texto">
+                <p>No recuerdo mi contraseña</p>
+            </div>
+        </div>
+
+        <img src="../../assets/img/Grupo 32966 copy.svg" alt="">  
+        <img src="../../assets/img/Grupo 32967 copy.svg" alt="">
+        <img src="../../assets/img/Elipse 216.svg" alt="">
+        <img src="../../assets/img/Elipse 197.svg" alt="">
+        <img src="../../assets/img/Grupo 36075.svg" alt="">
+        <img src="../../assets/img/Grupo 36052.svg" alt="">
+    </div>
+</body>
