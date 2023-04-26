@@ -22,12 +22,51 @@
   --413e4d-input-color: #413E4D;
 }
 
+body {
+  background-size: cover;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  height: 476px;
+  opacity: 1;
+}
+
+.contenedor {
+  padding: 20px;
+  text-align: center;
+}
+
+.imagen__sufi {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  top: 148px;
+  left: 508px;
+  width: 264px;
+  height: 76px;
+  opacity: 1;
+}
+/* Estilos CSS existentes para el contenido */
+
 .contenido {
   display: grid;
   justify-content: center;
   margin-top: 10vh;
   grid-template-areas:
     "info"
+    "contenido-descripcion"
     "entradas"
     "boton"
     "texto";
@@ -35,40 +74,57 @@
   text-align: center;
 }
 
-.contenido-info {
-  grid-area: info;
+.contenido-titulo h1 {
+  top: 236px;
+  left: 456px;
+  width: 368px;
+  height: 48px;
+  font: normal normal bold 40px/55px Open Sans;
+  letter-spacing: 0px;
+  color: #413E4D;
+  opacity: 1;
+  text-align: center;
+}
+
+.contenido-descripcion {
+  top: 292px;
+  left: 456px;
+  width: 368px;
+  height: 20px;
+  font: normal normal normal 16px/22px Open Sans;
+  letter-spacing: 0px;
+  color: #413E4D;
+  opacity: 1;
+  text-align: center;
 }
 
 .contenido-entradas {
-  display: flex;
-  grid-area: entradas;
-  flex-direction: column;
-  row-gap: 2vh;
-  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
-  box-shadow: 0px 0px 16px #00000029;
-  border-radius: 12px;
-  opacity: 1;
-  padding: 1vw;
-  position: relative;
+  position: center;
   top: 344px;
   left: 440px;
   width: 400px;
   height: 156px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px #00000029;
+  border-radius: 12px;
+  opacity: 1;
 }
 
 .contenido-entradas input {
+  position: center;
+  top: 360px;
+  left: 456px;
   width: 368px;
   height: 56px;
   letter-spacing: 0px;
   color: var(--azul-plomo);
   text-align: left;
   font: normal normal normal 16px/22px Open Sans;
-  color: #ABB9C7;
-  opacity: 1;
-  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
-  border: 1px solid var(--azul-plomo-50-);
+  background-color: #FFFFFF;
+  border: 1px solid #ABB9C780;
   border-radius: 6px;
-  padding: 0 1vw;
+  padding: 0 10px;
+  opacity: 1;
 }
 
 .contenido-boton {
@@ -86,6 +142,10 @@
 }
 
 .boton__texto {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--white_-ffffff);
+  text-align: center;
   font: normal normal bold 16px/22px Open Sans;
   letter-spacing: 0px;
   color: #FFFFFF;

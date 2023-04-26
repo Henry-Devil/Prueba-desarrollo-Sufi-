@@ -1,5 +1,6 @@
 
 <body>
+    <div class="wrapper">
     <div class="contenedor">
         <div class="contenido">
             <div class="contenido-info">
@@ -26,9 +27,8 @@
                 <div *ngIf="error" class="error">
                     Usuario o contraseña incorrectos.
                 </div>
-                <button type="button" (click)="login()">Iniciar sesión</button>
             </div>
-
+            <button><span class="boton__texto" (click)="login()" >Ingresar</span></button>
             <div class="contenido-texto">
                 <p>No recuerdo mi contraseña</p>
             </div>
@@ -41,4 +41,5 @@
         <img src="../../assets/img/Grupo 36075.svg" alt="">
         <img src="../../assets/img/Grupo 36052.svg" alt="">
     </div>
+</div>
 </body>
