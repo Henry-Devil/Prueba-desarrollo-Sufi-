@@ -1,0 +1,27 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Columnas de la tabla -->
+  <ng-container matColumnDef="fecha">
+    <mat-header-cell *matHeaderCellDef>Fecha y hora</mat-header-cell>
+    <mat-cell *matCellDef="let dato">{{ dato.fecha }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="desembolso">
+    <mat-header-cell *matHeaderCellDef>Número de desembolso</mat-header-cell>
+    <mat-cell *matCellDef="let dato">{{ dato.numeroDesembolso }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="tipoDocumento">
+    <mat-header-cell *matHeaderCellDef>Tipo de documento</mat-header-cell>
+    <mat-cell *matCellDef="let dato">{{ dato.tipoDocumento }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="numeroDocumento">
+    <mat-header-cell *matHeaderCellDef>Número de documento</mat-header-cell>
+    <mat-cell *matCellDef="let dato">{{ dato.numeroDocumento }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="monto">
+    <mat-header-cell *matHeaderCellDef>Monto</mat-header-cell>
+    <mat-cell *matCellDef="let dato">{{ dato.monto }}</mat-cell>
+  </ng-container>
+
+  <!-- Definición de las columnas -->
+  <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: columnas"></mat-row>
+</mat-table>
