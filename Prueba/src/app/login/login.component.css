@@ -44,8 +44,11 @@ body {
 }
 
 .contenedor {
-  padding: 20px;
-  text-align: center;
+  top: 148px;
+  left: 440px;
+  width: 400px;
+  height: 476px;
+  opacity: 1;
 }
 
 .imagen__sufi {
@@ -74,6 +77,16 @@ body {
   text-align: center;
 }
 
+.contenido-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; ;
+}
+.contenido-titulo, .contenido-descripcion {
+  margin-top: 8px;
+}
+
 .contenido-titulo h1 {
   top: 236px;
   left: 456px;
@@ -99,64 +112,118 @@ body {
 }
 
 .contenido-entradas {
-  position: center;
   top: 344px;
   left: 440px;
   width: 400px;
   height: 156px;
-  background-color: #FFFFFF;
+  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 16px #00000029;
   border-radius: 12px;
   opacity: 1;
 }
-
+input[type="text"], input [type="password"]{
+  margin: 14px;
+}
 .contenido-entradas input {
-  position: center;
   top: 360px;
   left: 456px;
   width: 368px;
   height: 56px;
-  letter-spacing: 0px;
-  color: var(--azul-plomo);
-  text-align: left;
-  font: normal normal normal 16px/22px Open Sans;
-  background-color: #FFFFFF;
+  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--azul-plomo-50-);
+  background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #ABB9C780;
   border-radius: 6px;
-  padding: 0 10px;
   opacity: 1;
 }
 
-.contenido-boton {
-  grid-area: boton;
+.contenido-entradas input::placeholder {
+  padding: 9px;
+  top: 368px;
+  left: 472px;
+  width: 336px;
+  height: 16px;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 12px/var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--azul-plomo);
+  text-align: left;
+  font: normal normal normal 12px/22px Open Sans;
+  letter-spacing: 0px;
+  color: #ABB9C7;
+  opacity: 1;
 }
 
-.contenido-boton button {
+.contenido-entradas input:focus {
+  top: 456px;
+  left: 472px;
+  width: 336px;
+  height: 20px;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(---413e4d-input-color);
+  text-align: left;
+  font: normal normal normal 16px/22px Open Sans;
+  letter-spacing: 0px;
+  color: #413E4D;
+  opacity: 1;
+}
+
+button {
+  position: absolute;
+  top: 490px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   width: 174px;
   height: 48px;
-  background: var(--red_1_-dd3542) 0% 0% no-repeat padding-box;
-  border-radius: 24px;
   border: none;
+  background-color: #DD3542;
+  color: white;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 48px;
   cursor: pointer;
-  opacity: 1;
+  outline: none;
 }
 
 .boton__texto {
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--white_-ffffff);
-  text-align: center;
+  top: 546px;
+  left: 577px;
+  width: 126px;
+  height: 20px;
   font: normal normal bold 16px/22px Open Sans;
   letter-spacing: 0px;
   color: #FFFFFF;
+  text-align: center;
   opacity: 1;
 }
 
-.contenido-texto {
-  grid-area: texto;
+.contenido-texto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contenido-texto p {
   text-decoration: underline;
   cursor: pointer;
+  top: 604px;
+  left: 472px;
+  width: 336px;
+  height: 16px;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 12px/17px var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(---413e4d-input-color);
+  text-align: center;
+  text-decoration: underline;
+  font: normal normal normal 12px/17px Open Sans;
+  letter-spacing: 0px;
+  color: #413E4D;
+  opacity: 1;
+  text-align: center;
+  margin-top: 65px;
 }
