@@ -9,7 +9,7 @@ Run ng serve for a dev server. Navigate to http://localhost:4200/. The applicati
 
 Usuario y contraseña: 123
 
-Dependencias de desarrollo que usé
+Dependencias de desarrollo que usé:
 
     "@angular/animations": "^15.1.0",
     "@angular/cdk": "^15.2.8",
@@ -26,8 +26,8 @@ Dependencias de desarrollo que usé
     "zone.js": "~0.12.0"
 
 
-"devDependencies": 
-{ 
+DevDependencies:
+
 "@angular-devkit/build-angular": "^15.1.6", 
 "@angular/cli": "~15.1.6", 
 "@angular/compiler-cli": "^15.1.0",
@@ -38,5 +38,4 @@ Dependencias de desarrollo que usé
  "karma-coverage": "~2.2.0",
  "karma-jasmine": "~5.1.0",
  "karma-jasmine-html-reporter": "~2.0.0",
- "typescript": "~4.9.4" 
-}
+ "typescript": "~4.9.4"
