@@ -1,45 +1,44 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-9a3qG3H1BB2QwCnJxgKjPZJYtZLz1Eg9t9D+GmO6eTjT1TfJgB4G+3sUNvH2QKjLgXfQyNQoNc+G6ofJN6jK8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
 <body>
+    <img src="../../assets/img/Frame 1grafismo1.svg" alt="grafismo" width="100%">
     <div class="wrapper">
-    <div class="contenedor">
-        <div class="contenido">
-            <div class="contenido-info">
-                <div class="contenido-imagen">
-                    <img src="../../assets/img/Grupo 258.svg" class="imagen__sufi" alt="">
-                </div>
-    
-                <div class="contenido-titulo">
-                    <h1 class="contenido__titulo">Sufipay</h1>
-                </div>
-    
-                <div class="contenido-descripcion">
-                    <p class="contenido__descripcion">Administrador comercial</p>
-                </div>
-            </div>
+        <div class="contenedor">
+            <div class="contenido">
+                <div class="contenido-info">
+                    <div class="contenido-imagen">
+                        <img src="../../assets/img/Grupo 258.svg" class="imagen__sufi" alt="">
+                    </div>
 
-            <div class="contenido-entradas">
-                <div>
-                    <input type="text" name="usuario" [(ngModel)]="username" placeholder="Usuario">
+                    <div class="contenido-titulo">
+                        <h1 class="contenido__titulo">Sufipay</h1>
+                    </div>
+
+                    <div class="contenido-descripcion">
+                        <p class="contenido__descripcion">Administrador comercial</p>
+                    </div>
                 </div>
-                <div>
-                    <input type="password" name="contrasena" [(ngModel)]="password" placeholder="Contraseña">
+
+                <div class="contenido-entradas">
+                    <div>
+                        <input type="text" name="usuario" [(ngModel)]="username" placeholder="Usuario" (keyup.enter)="login()">
+                    </div>
+                    <div>
+                        <input type="password" name="contrasena" [(ngModel)]="password" placeholder="Contraseña" (keyup.enter)="login()">
+                    </div>
+                    <div *ngIf="error" class="error">
+                        Usuario o contraseña incorrectos.
+                    </div>
                 </div>
-                <div *ngIf="error" class="error">
-                    Usuario o contraseña incorrectos.
+                <button><span class="boton__texto" (click)="login()">INGRESAR</span></button>
+                <div class="contenido-texto">
+                    <p>No recuerdo mi contraseña</p>
                 </div>
-            </div>
-            <button><span class="boton__texto" (click)="login()" >Ingresar</span></button>
-            <div class="contenido-texto">
-                <p>No recuerdo mi contraseña</p>
             </div>
         </div>
-
-        <img src="../../assets/img/Grupo 32966 copy.svg" alt="">  
-        <img src="../../assets/img/Grupo 32967 copy.svg" alt="">
-        <img src="../../assets/img/Elipse 216.svg" alt="">
-        <img src="../../assets/img/Elipse 197.svg" alt="">
-        <img src="../../assets/img/Grupo 36075.svg" alt="">
-        <img src="../../assets/img/Grupo 36052.svg" alt="">
     </div>
-</div>
 </body>

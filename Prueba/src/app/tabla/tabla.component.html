@@ -1,27 +1,94 @@
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <!-- Columnas de la tabla -->
-  <ng-container matColumnDef="fecha">
-    <mat-header-cell *matHeaderCellDef>Fecha y hora</mat-header-cell>
-    <mat-cell *matCellDef="let dato">{{ dato.fecha }}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="desembolso">
-    <mat-header-cell *matHeaderCellDef>Número de desembolso</mat-header-cell>
-    <mat-cell *matCellDef="let dato">{{ dato.numeroDesembolso }}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="tipoDocumento">
-    <mat-header-cell *matHeaderCellDef>Tipo de documento</mat-header-cell>
-    <mat-cell *matCellDef="let dato">{{ dato.tipoDocumento }}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="numeroDocumento">
-    <mat-header-cell *matHeaderCellDef>Número de documento</mat-header-cell>
-    <mat-cell *matCellDef="let dato">{{ dato.numeroDocumento }}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="monto">
-    <mat-header-cell *matHeaderCellDef>Monto</mat-header-cell>
-    <mat-cell *matCellDef="let dato">{{ dato.monto }}</mat-cell>
-  </ng-container>
-
-  <!-- Definición de las columnas -->
-  <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: columnas"></mat-row>
-</mat-table>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
+</head>
+<div class="pagina-principal">
+  <header class="menu">
+    <div class="menu-imagen">
+      <img src="../../assets/img/Grupo 175.svg" alt="imagen_sufi">
+    </div>
+    <div class="menu-contenido">
+      <div class="menu-boton">
+        <a href="#" class="link-icon">Cerrar sesión <img src="../../assets/img/arrow-right-to-bracket-solid.svg" alt="Icono de flecha" width="24" height="24"></a>
+      </div>
+    </div>
+  </header>
+  <section class="opciones">
+    <div class="opciones-contenido">
+      <div class="opciones-texto">
+        <h3 class="opciones__texto">Mis desembolsos</h3>
+      </div>
+      <div class="opciones-boton">
+        <button class="btn-download">
+          <img src="../../assets/img/arrow-down-solid.svg" alt="Descargar">
+          Descargar
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="datos">
+    <div class="datos-contenido">
+      <div class="datos-boton"></div>
+      <div class="datos-entradas">
+        <select name="select" class="entrada-identificacion">
+          <option value="value1" selected>Tipo doc.</option>
+          <option value="value2">Cédula</option>
+          <option value="value3">Tarjeta de identidad</option>
+          <option value="value4">Pasaporte</option>
+          <option value="value5">Cédula de extranjería</option>
+        </select>
+        <input type="text" placeholder="Numero de documento" class="entrada-texto">
+        <input type="text" placeholder="Número de desembolso" class="entrada-texto">
+        <input type="datetime-local" id="fechaInicio" name="fechaInicio" class="entrada-fecha">
+        <input type="datetime-local" id="fechaFinal" name="fechaFinal" class="entrada-fecha">
+      </div>
+    </div>
+  </section>
+  <section class="tabla">
+    <div class="contenedor-scroll">
+    <table id="miTabla" class="table" mat-table [dataSource]="dataSource">
+      <ng-container class="container-principal">
+        <!-- Columnas de la tabla -->
+        <ng-container matColumnDef="fecha">
+          <th mat-header-cell *matHeaderCellDef>Fecha y hora</th>
+          <td mat-cell *matCellDef="let dato">{{ dato.fecha }}</td>
+        </ng-container>
+        <ng-container matColumnDef="desembolso">
+          <th mat-header-cell *matHeaderCellDef>Número de desembolso</th>
+          <td mat-cell *matCellDef="let dato">{{ dato.numeroDesembolso }}</td>
+        </ng-container>
+        <ng-container matColumnDef="tipoDocumento">
+          <th mat-header-cell *matHeaderCellDef>Tipo de documento</th>
+          <td mat-cell *matCellDef="let dato">{{ dato.tipoDocumento }}</td>
+        </ng-container>
+        <ng-container matColumnDef="numeroDocumento">
+          <th mat-header-cell *matHeaderCellDef>Número de documento</th>
+          <td mat-cell *matCellDef="let dato">{{ dato.numeroDocumento }}</td>
+        </ng-container>
+        <ng-container matColumnDef="monto">
+          <th mat-header-cell *matHeaderCellDef>Monto</th>
+          <td mat-cell *matCellDef="let dato">{{ dato.monto }}</td>
+        </ng-container>
+      </ng-container>
+      <!-- Definición de las columnas -->
+      <tr class="tabla-header" mat-header-row *matHeaderRowDef="columnas"></tr>
+      <tr class="tabla-row" mat-row *matRowDef="let row; columns: columnas"></tr>
+    </table>
+    <div class="paginacion">
+      <button id="anterior">Anterior</button>
+      <span id="paginaActual">1</span>
+      <button id="siguiente">Siguiente</button>
+    </div>
+  </div>
+  </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha384-/+M2kLXQvI8Gnjs3Lk8D0tMVBnOQbT1qQ5t7uXvMGpOp3Xq4o5B4RVYJoPJszwR0"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#miTabla').DataTable();
+  });
+</script>
+<script src="https://kit.fontawesome.com/2fdd75f381.js" crossorigin="anonymous"></script>
